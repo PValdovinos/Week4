@@ -13,9 +13,12 @@ require_once ('vendor/autoload.php');
 $f3 = Base::instance();
 
 //define a default route
-$f3->route('GET /', function(){
+$f3->route('GET /', function($f3){
 
     //echo '<h1>Welcome to week 4</h1>';
+
+    // Add data to the Fat-Free "hive"
+    $f3->set('name', 'Pedro');
 
     //render a view page
     $view = new Template();
